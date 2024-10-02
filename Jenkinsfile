@@ -19,5 +19,10 @@ pipeline{
             sh "dotnet publish"
          }  
         }
+        stage('publish'){
+         steps{
+            sh "dotnet run /var/lib/jenkins/workspace/fromgitlab/bin/Release/net8.0/dotnet-storage.dll"
+         }  
+        }
     }
 }
