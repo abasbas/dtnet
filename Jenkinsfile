@@ -7,5 +7,13 @@ pipeline{
                 
             }
         }
+        stage('build'){
+            
+            sh "dotnet build"
+            
+        }
+        stage('publish'){
+            sh "dotnet publish"
+        }
     }
 }
